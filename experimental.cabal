@@ -25,14 +25,22 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
+      Graph
+      GridMap
   other-modules:
       Paths_experimental
   hs-source-dirs:
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
-      base >=4.7 && <5
+      GLUT
+    , base >=4.7 && <5
+    , bytestring
+    , gloss
+    , lens
+    , linear
+    , sdl2
+    , vector
   default-language: Haskell2010
 
 executable experimental-exe
@@ -43,8 +51,15 @@ executable experimental-exe
       app
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      GLUT
+    , base >=4.7 && <5
+    , bytestring
     , experimental
+    , gloss
+    , lens
+    , linear
+    , sdl2
+    , vector
   default-language: Haskell2010
 
 test-suite experimental-test
@@ -56,6 +71,13 @@ test-suite experimental-test
       test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      GLUT
+    , base >=4.7 && <5
+    , bytestring
     , experimental
+    , gloss
+    , lens
+    , linear
+    , sdl2
+    , vector
   default-language: Haskell2010
