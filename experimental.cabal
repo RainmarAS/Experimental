@@ -25,7 +25,9 @@ source-repository head
 
 library
   exposed-modules:
+      Character
       Graph
+      GraphicsUtils
       GridMap
   other-modules:
       Paths_experimental
